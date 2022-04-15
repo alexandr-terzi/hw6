@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Первое задание //
+
+        const p = 3.14;
+
+        const cylinder = {
+            r: 7,
+            h: 12,
+
+            calcS: function() {
+            let formulaS = (2 * p * cylinder.r**2) + (2 * p * cylinder.r * cylinder.h)
+            return formulaS    
+            },
+
+            calcV: function () {
+                let formulaV = p * cylinder.r**2 * cylinder.h
+                return formulaV
+            }
+        };
+
+        const resultS = 'S = ' + cylinder.calcS();
+
+        console.log(resultS);
+
+        const resultV = 'V = ' + cylinder.calcV();
+
+        console.log(resultV);
+
+        // Второе задание //
+
+        function getResult (firstNumber, secondNumber, symbol) {
+            if (symbol === '+') {
+                return firstNumber + secondNumber;
+            }
+            else if (symbol === '-') {
+                return firstNumber - secondNumber;
+            }
+            else if (symbol === '*') {
+                return firstNumber * secondNumber;
+            }
+            else if (symbol === '/') {
+                return firstNumber / secondNumber;
+            }
+            else if (symbol === '%') {
+                return firstNumber % secondNumber;
+            }
+        }
+
+        console.log(getResult(5, 6, '/'));
+
+        // Третье задание //
+
+        function isCharPresent (string, char) {
+            for (let i = 0; i < string.length; i++) {
+                if (string [i] === char) {
+                    return true;
+                }
+                
+            }
+            return false;
+        }
+
+        const ourString = 'Hello javascript!';
+
+        console.log(isCharPresent(ourString, 'H'));
+
+        // Четвёртое задание //
+
+        function charIndexOf (string, char) {
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] === char) {
+                    return [i];
+                }
+                
+            }
+            return -1;
+        }    
+
+        const newOurString = 'Okey, google';
+
+        console.log(charIndexOf(newOurString, 'g'));
+
+
+    </script>
+</body>
+</html>
